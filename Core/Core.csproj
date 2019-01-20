@@ -21,7 +21,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -54,7 +54,8 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TypeScriptTarget>ES5</TypeScriptTarget>
@@ -75,10 +76,19 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="modules\" />
+    <Folder Include="Log\" />
+    <Folder Include="Message\" />
+    <Folder Include="Playback\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Config\Interfaces\IConfig.ts" />
+    <TypeScriptCompile Include="Config\Interfaces\IConfigLoader.ts" />
+    <TypeScriptCompile Include="Enums\ModuleNames.ts" />
+    <TypeScriptCompile Include="ErrorTypes\CoreError.ts" />
+    <TypeScriptCompile Include="ErrorTypes\VersionError.ts" />
+    <TypeScriptCompile Include="Module\Interfaces\IModuleCore.ts" />
+    <TypeScriptCompile Include="Version.ts" />
     <TypeScriptCompile Include="WobbleCore.ts" />
   </ItemGroup>
   <PropertyGroup>
@@ -107,4 +117,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)..\Lib\*" "$(ProjectDir)..\Console\Output\" /y</PostBuildEvent>
+  </PropertyGroup>
 </Project>

@@ -3,3 +3,4 @@
 */bin/
 *.user
 /Lib
+/Console/Output

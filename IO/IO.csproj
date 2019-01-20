@@ -21,7 +21,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
     <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -38,12 +38,14 @@
     <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
     <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
     <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
-    <TypeScriptOutFile>WobbleIO.js</TypeScriptOutFile>
-    <TypeScriptOutDir>..\Lib</TypeScriptOutDir>
+    <TypeScriptOutFile>../Lib/WobbleIO.js</TypeScriptOutFile>
+    <TypeScriptOutDir>
+    </TypeScriptOutDir>
     <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
     <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
-    <TypeScriptSourceMap>True</TypeScriptSourceMap>
-    <TypeScriptMapRoot>..\Lib\Maps</TypeScriptMapRoot>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+    <TypeScriptMapRoot>
+    </TypeScriptMapRoot>
     <TypeScriptSourceRoot>
     </TypeScriptSourceRoot>
   </PropertyGroup>
@@ -52,7 +54,8 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TypeScriptTarget>ES5</TypeScriptTarget>
@@ -74,6 +77,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Config\JSONConfigLoader.ts" />
+    <TypeScriptCompile Include="WobbleIO.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{2574f603-4b6c-4a30-bfdd-e3bc09eedfdf}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -101,4 +114,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)..\Lib\*" "$(ProjectDir)..\Console\Output\" /y</PostBuildEvent>
+  </PropertyGroup>
 </Project>
