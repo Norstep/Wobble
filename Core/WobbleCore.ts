@@ -25,6 +25,7 @@
         }
 
         public Destroy() {
+            Wobble.Log.Logger.Destroy();
             Core._instance = undefined;
         }
     }
