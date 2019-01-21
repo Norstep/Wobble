@@ -2,6 +2,11 @@
 
 module Wobble {
 
+    export enum BuildType {
+        DEBUG = "Debug",
+        RELEASE = "Release"
+    }
+
     /**
      * Class that defines a version for anything that needs it (core, modules, etc.)
      * Defined by a string in format of MAJOR.MINOR.REVISION. Each must be numeric.
@@ -12,6 +17,7 @@ module Wobble {
         private _minor: number;
         private _revision: number;
         private _versionString: string;
+        private _buildType: BuildType;
 
         /**
          * The full version string
@@ -41,12 +47,19 @@ module Wobble {
             return this._revision;
         }
 
+        /*
+         * Returns what type of build this is
+         */
+        public get CurrentBuildType(): BuildType {
+            return this._buildType;
+        }
+
         /**
          * Creates a new Version definition
          * Defined by a string in format of MAJOR.MINOR.REVISION. Each must be numeric
          * @param versionString
          */
-        constructor( versionString: string ) {
+        public constructor( versionString: string, buildType: BuildType ) {
             let splitter: string[] = versionString.split(".");
 
             if ( splitter.length !== 3 ) {
@@ -62,6 +75,7 @@ module Wobble {
             }
 
             this._versionString = versionString;
+            this._buildType = buildType;
         }
     }
 }

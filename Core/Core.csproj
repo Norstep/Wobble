@@ -76,7 +76,6 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Log\" />
     <Folder Include="Message\" />
     <Folder Include="Playback\" />
     <Folder Include="Properties\" />
@@ -87,6 +86,10 @@
     <TypeScriptCompile Include="Enums\ModuleNames.ts" />
     <TypeScriptCompile Include="ErrorTypes\CoreError.ts" />
     <TypeScriptCompile Include="ErrorTypes\VersionError.ts" />
+    <TypeScriptCompile Include="Log\BasicLogger.ts" />
+    <TypeScriptCompile Include="Log\Interfaces\ILogger.ts" />
+    <TypeScriptCompile Include="Log\Logger.ts" />
+    <TypeScriptCompile Include="Log\ReleaseLogger.ts" />
     <TypeScriptCompile Include="Module\Interfaces\IModuleCore.ts" />
     <TypeScriptCompile Include="Version.ts" />
     <TypeScriptCompile Include="WobbleCore.ts" />

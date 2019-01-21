@@ -11,19 +11,20 @@ module Wobble.Console.Test {
             return this._core;
         }
 
-        constructor() {
-
-        }
-
-        Test() {
+        public Test() {
 
             try {
                 this._core = new Core();
-                this._core.initialize();
+                this._core.Initialize();
             } catch ( err ) {
                 console.error( "StartUpTest failed! " + err.message + "\n" + err.stack );
                 return false;
             }
+        }
+
+        public Destroy() {
+            this._core.Destroy();
+            this._core = undefined;
         }
     }
 }

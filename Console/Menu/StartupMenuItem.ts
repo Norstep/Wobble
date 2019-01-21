@@ -7,16 +7,21 @@ module Wobble.Console.Menu {
         public htmlContainer: HTMLDivElement;
         private _test: Test.StartUpTest;
 
-        //TODO: Make this support a collection of tests, one after another... in a generic way.
-        public triggeredTest;
-
         constructor() {
             super();
             this._test = new Test.StartUpTest();
         }
 
         public Destroy() {
+            if ( this.htmlContainer.parentElement ) {
+                this.htmlContainer.parentElement.removeChild( this.htmlContainer );
+            }
 
+            if ( this._test ) {
+                this._test.Destroy();
+            }
+
+            this.htmlContainer = undefined;
         }
 
         protected GenerateHTML() {
