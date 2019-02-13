@@ -6,5 +6,6 @@
         Log( message: string ): void;
         Debug( message: string ): void;
         Error( message: string ): void;
+        Warn( message: string ): void;
     }
 }

@@ -21,11 +21,13 @@
         }
 
         public Initialize() {
-            Wobble.Log.Logger.Initialize();
+            Log.Logger.Initialize();
+            Tags.Initialize();
         }
 
         public Destroy() {
-            Wobble.Log.Logger.Destroy();
+            Tags.Destroy();
+            Log.Logger.Destroy();
             Core._instance = undefined;
         }
     }

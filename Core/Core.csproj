@@ -81,6 +81,7 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Block.ts" />
     <TypeScriptCompile Include="Config\Interfaces\IConfig.ts" />
     <TypeScriptCompile Include="Config\Interfaces\IConfigLoader.ts" />
     <TypeScriptCompile Include="Enums\ModuleNames.ts" />
@@ -91,6 +92,7 @@
     <TypeScriptCompile Include="Log\Logger.ts" />
     <TypeScriptCompile Include="Log\ReleaseLogger.ts" />
     <TypeScriptCompile Include="Module\Interfaces\IModuleCore.ts" />
+    <TypeScriptCompile Include="Tags.ts" />
     <TypeScriptCompile Include="Version.ts" />
     <TypeScriptCompile Include="WobbleCore.ts" />
   </ItemGroup>

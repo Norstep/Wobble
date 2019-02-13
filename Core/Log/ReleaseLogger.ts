@@ -10,5 +10,6 @@
         public Error( message: string ) { }
         public Debug( message: string ) { }
         public Log( message: string ) { }
+        public Warn( message: string ) { }
     }
 }
