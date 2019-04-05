@@ -91,7 +91,9 @@
     <TypeScriptCompile Include="Log\Interfaces\ILogger.ts" />
     <TypeScriptCompile Include="Log\Logger.ts" />
     <TypeScriptCompile Include="Log\ReleaseLogger.ts" />
-    <TypeScriptCompile Include="Module\Interfaces\IModuleCore.ts" />
+    <TypeScriptCompile Include="Module\BaseModule.ts" />
+    <TypeScriptCompile Include="Module\GenericModuleFactory.ts" />
+    <TypeScriptCompile Include="Module\Interfaces\IModuleFactory.ts" />
     <TypeScriptCompile Include="Tags.ts" />
     <TypeScriptCompile Include="Version.ts" />
     <TypeScriptCompile Include="WobbleCore.ts" />
