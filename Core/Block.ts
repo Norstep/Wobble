@@ -11,6 +11,8 @@ module Wobble {
 
         public Tags: Tags;
 
+        public constructor() {
 
+        }
     }
 }
