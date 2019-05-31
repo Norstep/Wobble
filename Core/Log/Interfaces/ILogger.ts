@@ -1,11 +1,16 @@
 ﻿module Wobble.Log {
+
+    /**
+     * Interface that defines a log class 
+     */
     export interface ILogger {
 
         Enabled: boolean;
         Name: string;
-        Log( message: string ): void;
-        Debug( message: string ): void;
-        Error( message: string ): void;
-        Warn( message: string ): void;
+        Log( message: string, ...optionalParams: any[]  ): void;
+        Debug( message: string, ...optionalParams: any[]  ): void;
+        Error( message: string, ...optionalParams: any[]  ): void;
+        Warn( message: string, ...optionalParams: any[] ): void;
+        Info( message: string, ...optionalParams: any[] ): void;
     }
 }

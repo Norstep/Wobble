@@ -2,7 +2,7 @@
 
 module Wobble.IO {
 
-    export class WobbleIO implements Wobble.Module.IModuleLoader {
+    export class WobbleIO implements Module.IModuleFactory {
 
        
     }

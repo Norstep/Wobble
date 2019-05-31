@@ -1,5 +1,9 @@
 ﻿module Wobble {
 
+    /**
+     * Handles the tagging system. Instances are made to track and manage tags on an object.
+     * Statics are for managing the tags as a whole. See also: Block.ts
+     */
     export class Tags {
 
         private static _allTags: { [tag: string]: Array<string> };
@@ -47,6 +51,7 @@
             return this._tags[tag] === true;
         }
 
+        //TODO: Remove Tag functionality
         public RemoveTag( tag: string ) {
 
         }
