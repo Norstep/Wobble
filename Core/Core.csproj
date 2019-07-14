@@ -87,7 +87,7 @@
     <TypeScriptCompile Include="Enums\ModuleNames.ts" />
     <TypeScriptCompile Include="ErrorTypes\CoreError.ts" />
     <TypeScriptCompile Include="ErrorTypes\VersionError.ts" />
-    <TypeScriptCompile Include="Log\BasicLogger.ts" />
+    <TypeScriptCompile Include="Log\BasicConsoleLogger.ts" />
     <TypeScriptCompile Include="Log\Interfaces\ILogger.ts" />
     <TypeScriptCompile Include="Log\Logger.ts" />
     <TypeScriptCompile Include="Log\ReleaseLogger.ts" />
