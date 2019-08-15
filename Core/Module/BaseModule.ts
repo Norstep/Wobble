@@ -7,6 +7,7 @@
      * 
      * Classes that extend this are considered Entry Points for the module. 
      * Multiple points could be defined in a module, but only one should be invoked!
+     * Eventually the aim is to have external plugins register themselves as modules.
      */
     export abstract class BaseModule extends Block {
 
