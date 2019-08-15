@@ -6,6 +6,7 @@ module Wobble {
      * Basic building block of many Wobble objects.
      * Allows for naming, tagging, and receiving of messages.
      */
+    // TODO: Finish/Update stubs
     export abstract class Block {
 
         public Name: string;
@@ -14,6 +15,11 @@ module Wobble {
 
         public constructor() {
 
+        }
+
+        // update this def when the objects exist
+        public processMessage( msg: any ): boolean {
+            return false;
         }
     }
 }

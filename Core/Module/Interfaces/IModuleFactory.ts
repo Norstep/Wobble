@@ -1,5 +1,5 @@
 ﻿module Wobble.Module {
-    export interface IModuleFactory {
+    export interface IModuleFactory<T> {
 
     }
 }

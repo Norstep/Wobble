@@ -8,7 +8,10 @@
      * Classes that extend this are considered Entry Points for the module. 
      * Multiple points could be defined in a module, but only one should be invoked!
      */
-    export abstract class BaseModule {
+    export abstract class BaseModule extends Block {
 
+        public constructor() {
+            super();
+        }
     }
 }
